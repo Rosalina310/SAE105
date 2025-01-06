@@ -1,0 +1,18 @@
+
+.dg-addToCartFormGrid { margin-bottom:25px; }
+.dg-addToCartFormGrid svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: currentColor;
+  display:inline-block;  
+  // display:none !important;
+}
+.dg-addToCartFormGrid button {
+  // background:#FF8900 !important;
+  // color:#FFFFFF !important;
+}
+@media screen and (max-width: 600px) {
+  .dg-addToCartFormGrid svg { display:none; }
+  .dg-addToCartFormGrid button { font-size:10px; }
+}
