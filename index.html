@@ -33,25 +33,6 @@
             margin: 0 20px;
         }
 
-        .search-bar input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
-        }
-
-        .search-bar button {
-            padding: 10px;
-            background-color: #febd69;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-        }
-
-        .search-bar button:hover {
-            background-color: #f3a847;
-        }
-
         .cart {
             display: flex;
             align-items: center;
@@ -66,7 +47,7 @@
         }
 
         nav {
-            background-color: #d890ff;
+            background-color: #c275ee;
             color: white;
             padding: 10px 10px;
             display: flex;
@@ -134,10 +115,16 @@
         footer p {
             margin: 5px 0;
         }
+
+        #promo{
+            text-decoration: none;
+            color: #ae57e1;
+        }
     </style>
 </head>
 <body>
     <header>
+
         <h1>Les Reines du Tricot</h1>
 
         <div class="cart">
@@ -156,39 +143,54 @@
     <div class="container">
         <section id="produits">
             <h2>Les Offres du Moment</h2>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Pelote de laine">
-                <div class="product-details">
-                    <h3>-20% sur les laines de type Julia</h3>
-                    <p>Douce et résistante, idéale pour vos projets.</p>
-                    <p class="product-price">9,99 €</p>
-                </div>
-            </div>
-                <div class="product">
-                    <img src="https://via.placeholder.com/150" alt="Pelote de laine">
-                    <div class="product-details">
-                        <h3>Pour 5 achetés, 1 offerte</h3>
-                        <p>Douce et résistante, idéale pour vos projets.</p>
-                        <p class="product-price">9,99 €</p>
-                    </div>
-                </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Aiguilles à tricoter">
-                <div class="product-details">
-                    <h3>Kit d'aiguilles à tricoter</h3>
-                    <p>Inclut 10 tailles différentes pour s'adapter à tous vos projets.</p>
-                    <p class="product-price">19,99 €</p>
-                </div>
-            </div>
+                <table>
+                    <td>
+                        <th>
+                            <a href="accueil.html" id="promo" title="lien vers une page catalogue de laine julia">
+                            <div class="product">
+                                <img src="img/pelote.jpg" alt="panier de pelote">                
+                                <div class="product-details">
+                                    <h3>-20% sur les laines de type Julia</h3>
+                                    <p>Douce et résistante, idéale pour vos projets.</p>
+                                </div>
+                            </div>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="accueil.html" id="promo" title="lien vers le catalogue">
+                            <div class="product">
+                                <img src="img/pelotes5.jpg" alt="panier de pelote">  
+                                <div class="product-details">
+                                    <h3>Pour 5 achetés, 1 offerte</h3>
+                                    <p>Douce et résistante, idéale pour vos projets.</p>
+                                </div>
+                            </div>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="accueil.html" id="promo" title="lien vers le catalogue dédié au kit d'aiguillage">
+                            <div class="product">
+                                <img src="img/pelote6.jpg" alt="panier de pelote">  
+                                <div class="product-details">
+                                    <h3>Kit d'aiguilles à tricoter</h3>
+                                    <p>Inclut 10 tailles différentes pour s'adapter à tous vos projets.</p>
+                                </div>
+                            </div>
+                            </a>
+                        </th>
+                    </td>
+
+
+                </table>
         </div>
         </section>
 
-        <section id="guides">
+        <section id="texte">
             <h2>Guides et Tutoriels</h2>
             <p>Apprenez les bases du tricot, découvrez des techniques avancées et trouvez des idées de projets inspirants.</p>
         </section>
 
-        <section id="contact">
+        <section id="livraison">
             <h2>Contactez-Nous</h2>
             <p>Besoin d'aide ou envie de partager vos créations ? Envoyez-nous un email à <a href="mailto:contact@passiontricot.fr">contact@passiontricot.fr</a>.</p>
         </section>
