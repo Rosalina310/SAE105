@@ -314,5 +314,28 @@
         <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
         <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
     </footer>
+    
 </body>
 </html>
+<script>
+    // Fonction pour ajouter un produit au panier
+    function addToCart(productName, productPrice) {
+        // Récupère les articles existants dans le localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Ajoute le produit au tableau du panier
+        cart.push({ name: productName, price: productPrice });
+
+        // Sauvegarde à nouveau dans le localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Met à jour le nombre d'articles dans le panier
+        updateCartCount();
+    }
+
+    // Met à jour le nombre d'articles dans le panier affiché
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartCount = cart.length;
+        document.querySelector('#cart span').textContent = `Panier (${cartCount})`;
+    }
