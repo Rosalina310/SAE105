@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Les Reines du Tricot</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcf6fa;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #6b3d8c;
+        }
+
+        /* Grille des produits */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Carte produit */
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0 10px 0;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #b12704;
+            margin-bottom: 10px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #febd69;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .buy-button:hover {
+            background-color: #f3a847;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #6b3d8c;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Les Reines du Tricot</h1>
+    </header>
+
+    <h2>Nos Produits</h2>
+    <div class="product-grid">
+        <!-- Carte produit 1 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Pelote de Laine Mérinos</h3>
+                <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
+                <p class="product-price">9,99 €</p>
+                <a href="#" class="buy-button">Acheter</a>
+            </div>
+        </div>
+
+        <!-- Carte produit 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Pelote de Coton Bio</h3>
+                <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
+                <p class="product-price">7,50 €</p>
+                <a href="#" class="buy-button">Acheter</a>
+            </div>
+        </div>
+
+        <!-- Carte produit 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Aiguilles à tricoter" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Aiguilles à Tricoter en Bois</h3>
+                <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
+                <p class="product-price">12,90 €</p>
+                <a href="#" class="buy-button">Acheter</a>
+            </div>
+        </div>
+
+        <!-- Carte produit 4 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Kit de tricot" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Kit de Tricot Débutant</h3>
+                <p class="product-description">Tout le nécessaire pour commencer facilement.</p>
+                <p class="product-price">29,90 €</p>
+                <a href="#" class="buy-button">Acheter</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+        <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+    </footer>
+</body>
+</html>
