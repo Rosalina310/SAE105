@@ -192,20 +192,6 @@
             text-decoration: none;
         }
 
-        .container {
-            padding: 20px;
-        }
-
-        .product {
-            display: flex;
-            align-items: center;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px 0;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
 
         .product img {
             max-width: 150px;
@@ -249,7 +235,8 @@
 
         <div class="cart">
             <img src="https://via.placeholder.com/24" alt="Panier">
-            <span>Panier</span>
+            <span><a href="panier.html">Panier</a></span>
+            
         </div>
     </header>
 
@@ -263,53 +250,54 @@
 </head>
 <body>
 
-    <h2>Nos Produits</h2>
-    <div class="product-grid">
-        <!-- Carte produit 1 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
-            <div class="product-info">
-                <h3 class="product-title">Pelote de Laine Mérinos</h3>
-                <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
-                <p class="product-price">9,99 €</p>
-                <a href="#" class="buy-button">Acheter</a>
+    <body>
+        <h2>Nos Produits</h2>
+        <div class="product-grid">
+            <!-- Carte produit 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Laine Mérinos</h3>
+                    <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
+                    <p class="product-price">9,99 €</p>
+                    <button class="addToCart" data-id="1" data-name="Pelote de Laine Mérinos" data-price="9.99">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Coton Bio</h3>
+                    <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
+                    <p class="product-price">7,50 €</p>
+                    <button class="addToCart" data-id="2" data-name="Pelote de Coton Bio" data-price="7.50">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Aiguilles à tricoter" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Aiguilles à Tricoter en Bois</h3>
+                    <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
+                    <p class="product-price">12,90 €</p>
+                    <button class="addToCart" data-id="3" data-name="Aiguilles à Tricoter en Bois" data-price="12.90">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Kit de tricot" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Kit de Tricot Débutant</h3>
+                    <p class="product-description">Tout le nécessaire pour commencer facilement.</p>
+                    <p class="product-price">29,90 €</p>
+                    <button class="addToCart" data-id="4" data-name="Kit de Tricot Débutant" data-price="29.90">Ajouter au panier</button>
+                </div>
             </div>
         </div>
-
-        <!-- Carte produit 2 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
-            <div class="product-info">
-                <h3 class="product-title">Pelote de Coton Bio</h3>
-                <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
-                <p class="product-price">7,50 €</p>
-                <a href="#" class="buy-button">Acheter</a>
-            </div>
-        </div>
-
-        <!-- Carte produit 3 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Aiguilles à tricoter" class="product-image">
-            <div class="product-info">
-                <h3 class="product-title">Aiguilles à Tricoter en Bois</h3>
-                <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
-                <p class="product-price">12,90 €</p>
-                <a href="#" class="buy-button">Acheter</a>
-            </div>
-        </div>
-
-        <!-- Carte produit 4 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Kit de tricot" class="product-image">
-            <div class="product-info">
-                <h3 class="product-title">Kit de Tricot Débutant</h3>
-                <p class="product-description">Tout le nécessaire pour commencer facilement.</p>
-                <p class="product-price">29,90 €</p>
-                <a href="#" class="buy-button">Acheter</a>
-            </div>
-        </div>
-    </div>
-
+    <script src="script.js"></script>
     <footer>
         <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
         <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
@@ -318,24 +306,24 @@
 </body>
 </html>
 <script>
-    // Fonction pour ajouter un produit au panier
-    function addToCart(productName, productPrice) {
-        // Récupère les articles existants dans le localStorage
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // Ajoute le produit au tableau du panier
-        cart.push({ name: productName, price: productPrice });
-
-        // Sauvegarde à nouveau dans le localStorage
-        localStorage.setItem('cart', JSON.stringify(cart));
-
-        // Met à jour le nombre d'articles dans le panier
-        updateCartCount();
+    // Fonction pour ajouter un cookie
+    function setCookie(name, value, minutes) {
+        const now = new Date();
+        now.setTime(now.getTime() + minutes * 60 * 1000);
+        document.cookie = `${name}=${value};expires=${now.toUTCString()};path=/`;
     }
 
-    // Met à jour le nombre d'articles dans le panier affiché
-    function updateCartCount() {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let cartCount = cart.length;
-        document.querySelector('#cart span').textContent = `Panier (${cartCount})`;
-    }
+    // Ajout d'un article au panier
+    document.getElementById('addToCart').addEventListener('click', () => {
+        const product = {
+            id: 1,
+            name: 'Produit 1',
+            price: 10.99,
+        };
+
+        // Convertir l'article en JSON pour le stocker dans le cookie
+        setCookie('cartItem', JSON.stringify(product), 10); // Expire dans 10 minutes
+        alert('Article ajouté au panier !');
+    });
+</script>
+</body>

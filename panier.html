@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre Panier - Les Reines du Tricot</title>
+    <title>Les Reines du Tricot</title>
     <style>
-        /* Styles généraux */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,117 +13,51 @@
             color: #333;
         }
 
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            color: #ffffff;
+        header {
+            background-color: #ae57e1;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        h2 {
-            text-align: center;
-            margin: 20px 0;
-            color: #6b3d8c;
-        }
-
-        .cart-items {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .cart-item {
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .cart-item h3 {
+        header h1 {
             margin: 0;
+            font-size: 24px;
+        }
+        .cart img {
+            width: 24px;
+            margin-right: 10px;
         }
 
-        .cart-item p {
-            margin: 5px 0;
+        nav {
+            background-color: #c275ee;
+            color: white;
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-between;
         }
 
-        .empty-cart {
-            text-align: center;
-            color: #b12704;
-        }
-
-        .clear-cart {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #febd69;
+        nav a {
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 14px;
         }
 
-        .clear-cart:hover {
-            background-color: #f3a847;
+        nav a:hover {
+            text-decoration: none;
         }
+
     </style>
-</head>
 <body>
 
-    <header>
-        <h1>Les Reines du Tricot</h1>
-    </header>
+    <h1>Votre Panier</h1>
+    <ul id="cartItems"></ul>
 
-    <h2>Votre Panier</h2>
-    <div class="cart-items" id="cart-items">
-        <!-- Les produits ajoutés au panier s'afficheront ici -->
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
-        <a href="index.html">Retour à la boutique</a>
-    </footer>
-
-    <script>
-        // Fonction pour afficher les produits du panier
-        function displayCart() {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let cartContainer = document.getElementById('cart-items');
-            cartContainer.innerHTML = '';
-
-            if (cart.length === 0) {
-                cartContainer.innerHTML = `<p class="empty-cart">Votre panier est vide.</p>`;
-            } else {
-                let total = 0;
-
-                cart.forEach(item => {
-                    total += item.price;
-                    cartContainer.innerHTML += `
-                        <div class="cart-item">
-                            <h3>${item.name}</h3>
-                            <p>Prix: ${item.price.toFixed(2)} €</p>
-                        </div>
-                    `;
-                });
-
-                cartContainer.innerHTML += `
-                    <div class="cart-item">
-                        <h3>Total: ${total.toFixed(2)} €</h3>
-                    </div>
-                    <a href="#" class="clear-cart" onclick="clearCart()">Vider le Panier</a>
-                `;
-            }
-        }
-
-        // Fonction pour vider le panier
-        function clearCart() {
-            localStorage.removeItem('cart');
-            displayCart();  // Reaffiche le panier après suppression
-        }
-
-        // Afficher le panier lorsque la page se charge
-        window.onload = displayCart;
-    </script>
+    <script src="panier.js"></script>
 </body>
 </html>
+
+  
