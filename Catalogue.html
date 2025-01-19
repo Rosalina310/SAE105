@@ -242,7 +242,7 @@
 
     <nav>
         <a href="index.html">Accueil</a>
-        <a href="#produits">Produits</a>
+        <a href="Catalogue.html">Produits</a>
         <a href="#guides">Guides</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -297,7 +297,7 @@
                 </div>
             </div>
         </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
     <footer>
         <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
         <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
@@ -305,25 +305,3 @@
     
 </body>
 </html>
-<script>
-    // Fonction pour ajouter un cookie
-    function setCookie(name, value, minutes) {
-        const now = new Date();
-        now.setTime(now.getTime() + minutes * 60 * 1000);
-        document.cookie = `${name}=${value};expires=${now.toUTCString()};path=/`;
-    }
-
-    // Ajout d'un article au panier
-    document.getElementById('addToCart').addEventListener('click', () => {
-        const product = {
-            id: 1,
-            name: 'Produit 1',
-            price: 10.99,
-        };
-
-        // Convertir l'article en JSON pour le stocker dans le cookie
-        setCookie('cartItem', JSON.stringify(product), 10); // Expire dans 10 minutes
-        alert('Article ajouté au panier !');
-    });
-</script>
-</body>
