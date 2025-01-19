@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Reines du Tricot</title>
+    <title>Les Reines du Tricot - Panier</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
 
         header {
             background-color: #ae57e1;
-            color: rgb(255, 255, 255);
+            color: white;
             padding: 10px 20px;
             display: flex;
             align-items: center;
@@ -26,6 +26,7 @@
             margin: 0;
             font-size: 24px;
         }
+
         .cart img {
             width: 24px;
             margin-right: 10px;
@@ -50,6 +51,31 @@
             text-decoration: none;
         }
 
+        h1, h2 {
+            text-align: center;
+            color: #ae57e1;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cartItems li {
+            background: #fff;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 400px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #cartTotal {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +85,6 @@
         <div class="cart">
             <img src="https://via.placeholder.com/24" alt="Panier">
             <span><a href="panier.html">Panier</a></span>
-            
         </div>
     </header>
 
@@ -69,13 +94,12 @@
         <a href="#guides">Guides</a>
         <a href="#contact">Contact</a>
     </nav>
-</head>
 
-<h1>Votre Panier</h1>
+    <h1>Votre Panier</h1>
 <ul id="cartItems"></ul>
+<h2>Total</h2>
+<p id="cartTotal"></p>
+<script src="panier.js"></script>
 
-    <script src="panier.js"></script>
 </body>
 </html>
-
-  
