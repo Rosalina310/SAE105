@@ -10,11 +10,18 @@ function getCookie(name) {
     return null;
 }
 
+// Fonction pour définir un cookie
+function setCookie(name, value, minutes) {
+    const now = new Date();
+    now.setTime(now.getTime() + minutes * 60 * 1000); // Expiration en minutes
+    document.cookie = `${name}=${encodeURIComponent(value)};expires=${now.toUTCString()};path=/`;
+}
+
 // Charger les articles du panier
 window.addEventListener('DOMContentLoaded', () => {
     const cartItems = document.getElementById('cartItems'); // Conteneur pour les articles du panier
     const cartTotal = document.getElementById('cartTotal'); // Conteneur pour le total
-    const cart = JSON.parse(getCookie('cart') || '[]'); // Récupère tous les produits du panier
+    let cart = JSON.parse(getCookie('cart') || '[]'); // Récupère tous les produits du panier
 
     if (cart.length > 0) {
         let totalPrice = 0; // Initialisation du prix total
@@ -32,10 +39,30 @@ window.addEventListener('DOMContentLoaded', () => {
             return acc;
         }, []);
 
-        // Afficher les produits avec leur quantité
+        // Afficher les produits avec leur quantité et bouton de suppression
         groupedProducts.forEach(product => {
             const listItem = document.createElement('li');
             listItem.textContent = `${product.name} - ${product.price} € x(${product.quantity})`;
+
+            // Ajouter le bouton de suppression
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Supprimer';
+            deleteButton.style.marginLeft = '10px';
+            deleteButton.addEventListener('click', () => {
+                if (confirm(`Êtes-vous sûr de vouloir supprimer ${product.name} de votre panier ?`)) {
+                    // Supprimer le produit du panier
+                    cart = cart.filter(item => item.id !== product.id);
+
+                    // Mettre à jour le cookie avec le panier mis à jour
+                    setCookie('cart', JSON.stringify(cart), 10);
+
+                    // Réactualiser l'affichage du panier
+                    window.location.reload(); // Utiliser window.location.reload() pour forcer le rechargement de la page
+                }
+            });
+
+            // Ajouter le bouton au produit
+            listItem.appendChild(deleteButton);
             cartItems.appendChild(listItem);
 
             // Calculer le prix total
