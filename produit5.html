@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Reines du Tricot</title>
+    <link href="stylel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Les Reines du Tricot</h1>
+        <div class="cart">
+            <img src="img/panier.png" alt="Panier">
+            <span><a href="panier.html">Panier</a></span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Catalogue.html">Produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="product-header">
+            <img src="img/agneau.jpg" alt="laine d'agneau">
+            <div class="product-info">
+                <h1>Laine d'agneau</h1>
+                <p class="price">€9.99</p>
+                <p>Disponible en stock</p>
+
+                <label for="couleur">Choisissez la couleur :</label>
+                <select id="couleur" name="couleur">
+                    <option value="blanc">Blanc</option>
+                    <option value="noir">Noir</option>
+                    <option value="rose">Rose</option>
+                    <option value="bleu">Bleu</option>
+                    <option value="vert">Vert</option>
+                </select>
+
+                </br>
+                <label for="quantite">Choisissez la quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
+                </br>
+            </br>
+                <button class="addToCart" data-id="5" data-name="Pelote de Laine d'agneau" data-price="9.99" onclick="ajouterAuPanier()">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description du produit</h3>
+            <p>La laine d'agneau est une fibre naturelle obtenue à partir de la toison des agneaux, généralement lors de leur première tonte, qui a lieu autour de six à huit mois. Elle est particulièrement douce, fine et légère, offrant une sensation agréable au toucher. La laine d'agneau est également très isolante, tout en étant respirante, ce qui permet de maintenir une température corporelle confortable, qu'il fasse froid ou chaud.
+
+                Cette laine est souvent utilisée pour fabriquer des vêtements et des accessoires haut de gamme, comme des pulls, des écharpes ou des couvertures, en raison de ses propriétés thermorégulatrices et de sa douceur incomparable. Elle est aussi réputée pour sa capacité à absorber l'humidité tout en restant sèche au toucher, ce qui contribue à son confort.
+                
+                D'un point de vue esthétique, la laine d'agneau possède un aspect léger et duveteux, et elle peut être teintée facilement pour offrir une large gamme de couleurs. Enfin, elle est moins rugueuse que la laine d'animaux plus âgés, ce qui la rend idéale pour les peaux sensibles.</p>
+        </div>
+
+        <div class="product-details">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Poids : 50g</li>
+                <li>taille :2m</li>
+                <li>Matériau : laine</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+        <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        function ajouterAuPanier() {
+            var couleur = document.getElementById('couleur').value;
+            var quantite = document.getElementById('quantite').value;
+
+            alert('Ajouté au panier: ' + quantite + ' pelote(s) de laine d\'agneau (' + couleur + ')');
+        }
+    </script>
+</body>
+</html>

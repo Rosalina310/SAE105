@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Reines du Tricot</title>
+    <link href="stylel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Les Reines du Tricot</h1>
+        <div class="cart">
+            <img src="img/panier.png" alt="Panier">
+            <span><a href="panier.html">Panier</a></span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Catalogue.html">Produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="product-header">
+            <img src="img/kit.jpg" alt="Kit de tricot">
+            <div class="product-info">
+                <h1>Kit de tricot</h1>
+                <p class="price">€29.90</p>
+                <p>Disponible en stock</p>
+
+                </br>
+                <label for="quantite">Choisissez la quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
+                </br>
+                </br>
+                <button class="addToCart" data-id="4" data-name="Kit de Tricot" data-price="29.90" onclick="ajouterAuPanier()">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description du produit</h3>
+            <p>Un kit de tricot est l'ensemble parfait pour les passionnés de tricot, qu'ils soient débutants ou experts. Il contient tous les éléments essentiels pour démarrer un projet, tels que des aiguilles, de la laine de qualité, un porte-aiguilles et souvent un manuel ou des instructions pour guider les premiers pas. Ce kit offre la possibilité de réaliser des créations uniques, que ce soit des accessoires, des vêtements ou des décorations. Pratique et complet, il permet de s’initier facilement au tricot ou d'explorer de nouvelles techniques, tout en offrant la satisfaction de créer soi-même des pièces personnalisées. Un choix idéal pour offrir ou se faire plaisir tout en favorisant la détente et la créativité.</p>
+        </div>
+
+        <div class="product-details">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Poids : 200g</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+        <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        function ajouterAuPanier() {
+            var quantite = document.getElementById('quantite').value;
+
+            alert('Ajouté au panier: ' + quantite + ' Kit de tricot');
+        }
+    </script>
+</body>
+</html>

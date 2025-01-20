@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Reines du Tricot</title>
+    <link href="stylel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Les Reines du Tricot</h1>
+        <div class="cart">
+            <img src="img/panier.png" alt="Panier">
+            <span><a href="panier.html">Panier</a></span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Catalogue.html">Produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="product-header">
+            <img src="img/bambou.jpg" alt="aiguille en bambou">
+            <div class="product-info">
+                <h1>Aiguilles en bambou</h1>
+                <p class="price">€12.90</p>
+                <p>Disponible en stock</p>
+
+                </br>
+                <label for="quantite">Choisissez la quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
+                </br>
+                </br>
+                <button class="addToCart" data-id="15" data-name="Aiguilles en bambou" data-price="12.90" onclick="ajouterAuPanier()">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description du produit</h3>
+            <p>Les aiguilles en bambou des reines du Tricot allient légèreté, robustesse et respect de l'environnement. Fabriquées à partir de bambou durable, elles offrent une prise en main agréable et une douceur unique, permettant de tricoter pendant des heures sans fatigue. Leur surface lisse garantit une glisse parfaite des fils, tout en étant suffisamment résistante pour éviter les éclats. Le bambou, naturellement antistatique, aide à maintenir les mailles en place, ce qui rend ces aiguilles idéales pour les projets délicats. Avec les Reines du Tricot, tricotez avec une conscience écologique et profitez d'un outil de qualité supérieure pour vos créations les plus raffinées.</p>
+        </div>
+
+        <div class="product-details">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Poids : 100g</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+        <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        function ajouterAuPanier() {
+            var quantite = document.getElementById('quantite').value;
+
+            alert('Ajouté au panier: ' + quantite + ' aiguilles en bambou');
+        }
+    </script>
+</body>
+</html>

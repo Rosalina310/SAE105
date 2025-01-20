@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Reines du Tricot</title>
+    <link href="stylel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Les Reines du Tricot</h1>
+        <div class="cart">
+            <img src="img/panier.png" alt="Panier">
+            <span><a href="panier.html">Panier</a></span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Catalogue.html">Produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="product-header">
+            <img src="img/bois.jpg" alt="aiguille en bois">
+            <div class="product-info">
+                <h1>Aiguille en bois</h1>
+                <p class="price">€12.90</p>
+                <p>Disponible en stock</p>
+
+                </br>
+                <label for="quantite">Choisissez la quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
+                </br>
+                </br>
+                <button class="addToCart" data-id="3" data-name="Aiguille en bois" data-price="12.90" onclick="ajouterAuPanier()">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description du produit</h3>
+            <p>Les aiguilles en bois sont un choix privilégié pour les tricoteurs à la recherche d’un outil à la fois naturel et agréable à utiliser. Fabriquées à partir de bois durables, elles sont légères et douces au toucher, offrant une prise en main confortable. Leur surface lisse permet aux mailles de glisser facilement sans être trop glissantes, ce qui les rend idéales pour les débutants comme pour les tricoteurs expérimentés. Les aiguilles en bois sont également appréciées pour leur esthétique chaleureuse et leur aspect écologique, étant une alternative durable aux matériaux synthétiques. Grâce à leur fabrication respectueuse de l’environnement, elles sont parfaites pour les projets de tricot éco-responsables.</p>
+        </div>
+
+        <div class="product-details">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Poids : 150g</li>
+                <li>taille : 20cm</li>
+                <li>Matériau : bois</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+        <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        function ajouterAuPanier() {
+            var quantite = document.getElementById('quantite').value;
+
+            alert('Ajouté au panier: ' + quantite + ' aiguille(s)');
+        }
+    </script>
+</body>
+</html>

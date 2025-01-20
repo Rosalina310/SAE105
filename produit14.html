@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Reines du Tricot</title>
+    <link href="stylel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Les Reines du Tricot</h1>
+        <div class="cart">
+            <img src="img/panier.png" alt="Panier">
+            <span><a href="panier.html">Panier</a></span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Catalogue.html">Produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="product-header">
+            <img src="img/synthetique.jpg" alt="laine synthétique">
+            <div class="product-info">
+                <h1>Laine synthétique</h1>
+                <p class="price">€7.50</p>
+                <p>Disponible en stock</p>
+
+                <label for="couleur">Choisissez la couleur :</label>
+                <select id="couleur" name="couleur">
+                    <option value="blanc">Blanc</option>
+                    <option value="noir">Noir</option>
+                    <option value="rose">Rose</option>
+                    <option value="bleu">Bleu</option>
+                    <option value="vert">Vert</option>
+                </select>
+
+                </br>
+                <label for="quantite">Choisissez la quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
+                </br>
+                </br>
+                <button class="addToCart" data-id="14" data-name="Pelote de laine synthétique" data-price="7.50" onclick="ajouterAuPanier()">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description du produit</h3>
+            <p>La laine polyester des Reines du tricot est une fibre synthétique moderne, conçue pour offrir à la fois durabilité et confort. Léger et facile à entretenir, le polyester est une matière résistante qui conserve sa forme et sa couleur au fil du temps. Il offre également une excellente isolation thermique, tout en étant plus abordable et plus facile à entretenir que la laine naturelle. Idéale pour des vêtements et accessoires pratiques, mais élégants, la laine polyester des Reines du tricot allie fonctionnalité et style contemporain. Conçue pour répondre aux besoins de la vie quotidienne, elle apporte confort et performance sans compromis.</p>
+        </div>
+
+        <div class="product-details">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Poids : 60g</li>
+                <li>taille : 2m</li>
+                <li>Matériau : polyester</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+        <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        function ajouterAuPanier() {
+            var couleur = document.getElementById('couleur').value;
+            var quantite = document.getElementById('quantite').value;
+
+            alert('Ajouté au panier: ' + quantite + ' pelote(s) de laine d\'agneau (' + couleur + ')');
+        }
+    </script>
+</body>
+</html>

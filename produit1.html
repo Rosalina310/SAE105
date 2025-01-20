@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Reines du Tricot</title>
+    <link href="stylel.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Les Reines du Tricot</h1>
+        <div class="cart">
+            <img src="img/panier.png" alt="Panier">
+            <span><a href="panier.html">Panier</a></span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="Catalogue.html">Produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="product-header">
+            <img src="img/merinos.jpg" alt="laine d'agneau">
+            <div class="product-info">
+                <h1>Laine Mérinos</h1>
+                <p class="price">€9.99</p>
+                <p>Disponible en stock</p>
+
+                <label for="couleur">Choisissez la couleur :</label>
+                <select id="couleur" name="couleur">
+                    <option value="blanc">Blanc</option>
+                    <option value="noir">Noir</option>
+                    <option value="rose">Rose</option>
+                    <option value="bleu">Bleu</option>
+                    <option value="vert">Vert</option>
+                </select>
+
+                </br>
+                <label for="quantite">Choisissez la quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
+                </br>
+                </br>
+                <button class="addToCart" data-id="1" data-name="Pelote de Laine Mérinos" data-price="9.99" onclick="ajouterAuPanier()">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description du produit</h3>
+            <p>La laine mérinos est une fibre naturelle provenant des moutons mérinos, une race réputée pour la qualité exceptionnelle de leur laine. Cette laine est douce, fine et légère, offrant une sensation agréable sur la peau. Elle est également respirante, régulant efficacement la température corporelle en hiver comme en été, tout en étant naturellement résistante aux odeurs. Idéale pour les vêtements en contact direct avec la peau, la laine mérinos est souvent utilisée pour les pulls, les chaussettes et les vêtements de sport. Elle est également durable, hypoallergénique et biodégradable, ce qui en fait un choix éco-responsable pour les amateurs de fibres naturelles.</p>
+        </div>
+
+        <div class="product-details">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Poids : 50g</li>
+                <li>taille : 2m</li>
+                <li>Matériau : Laine Mérinos</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+        <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        function ajouterAuPanier() {
+            var couleur = document.getElementById('couleur').value;
+            var quantite = document.getElementById('quantite').value;
+
+            alert('Ajouté au panier: ' + quantite + ' pelote(s) de laine Mérinos (' + couleur + ')');
+        }
+    </script>
+</body>
+</html>
