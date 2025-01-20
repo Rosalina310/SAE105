@@ -68,12 +68,65 @@
     </footer>
 
     <script>
+        // Fonction pour récupérer un cookie
+        function getCookie(name) {
+            const cookies = document.cookie.split('; ');
+            for (let cookie of cookies) {
+                const [key, value] = cookie.split('=');
+                if (key === name) {
+                    return decodeURIComponent(value);
+                }
+            }
+            return null;
+        }
+    
+        // Fonction pour définir un cookie
+        function setCookie(name, value, minutes) {
+            const now = new Date();
+            now.setTime(now.getTime() + minutes * 60 * 1000); // Expiration en minutes
+            document.cookie = `${name}=${encodeURIComponent(value)};expires=${now.toUTCString()};path=/`;
+        }
+    
+        // Fonction pour ajouter un produit au panier
         function ajouterAuPanier() {
-            var couleur = document.getElementById('couleur').value;
-            var quantite = document.getElementById('quantite').value;
-
+            var couleur = document.getElementById('couleur').value; // Récupère la couleur choisie
+            var quantite = parseInt(document.getElementById('quantite').value); // Récupère la quantité saisie
+    
+            // Vérification de la quantité
+            if (quantite <= 0) {
+                alert('Veuillez saisir une quantité valide.');
+                return;
+            }
+    
+            // Définition du produit à ajouter au panier
+            var produit = {
+                id: 'crochet_' + couleur, // ID unique basé sur la couleur
+                name: 'Crochet',
+                couleur: couleur,
+                price: 3.99, // Exemple de prix
+                quantity: quantite
+            };
+    
+            // Récupère le panier actuel depuis le cookie
+            let cart = JSON.parse(getCookie('cart') || '[]');
+    
+            // Vérifie si le produit avec cette couleur existe déjà dans le panier
+            const existingProduct = cart.find(item => item.id === produit.id);
+            if (existingProduct) {
+                // Si déjà présent, on met à jour la quantité
+                existingProduct.quantity += produit.quantity;
+            } else {
+                // Sinon, on l'ajoute au panier
+                cart.push(produit);
+            }
+    
+            // Met à jour le cookie avec le panier mis à jour
+            setCookie('cart', JSON.stringify(cart), 10); // 10 minutes d'expiration
+    
+            // Alerte à l'utilisateur
             alert('Ajouté au panier: ' + quantite + ' crochet(s) (' + couleur + ')');
         }
     </script>
+    
 </body>
 </html>
