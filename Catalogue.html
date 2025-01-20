@@ -4,237 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produits - Les Reines du Tricot</title>
-    <style>
-        /* Styles généraux */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fcf6fa;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            color: #ffffff;
-        }
-        h2 {
-            text-align: center;
-            margin: 20px 0;
-            color: #6b3d8c;
-        }
-
-        /* Grille des produits */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Carte produit */
-        .product-card {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .product-info {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .product-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin: 10px 0;
-        }
-
-        .product-description {
-            font-size: 14px;
-            color: #666;
-            margin: 5px 0 10px 0;
-        }
-
-        .product-price {
-            font-size: 16px;
-            font-weight: bold;
-            color: #b12704;
-            margin-bottom: 10px;
-        }
-
-        .buy-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #febd69;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: background-color 0.2s ease-in-out;
-        }
-
-        .buy-button:hover {
-            background-color: #f3a847;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            background-color: #6b3d8c;
-            color: white;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fcf6fa;
-            color: #333;
-        }
-
-        header {
-            background-color: #ae57e1;
-            color: rgb(255, 255, 255);
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .search-bar {
-            display: flex;
-            flex: 1;
-            margin: 0 20px;
-        }
-
-        .search-bar input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
-        }
-
-        .search-bar button {
-            padding: 10px;
-            background-color: #febd69;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-        }
-
-        .search-bar button:hover {
-            background-color: #f3a847;
-        }
-
-        .cart {
-            display: flex;
-            align-items: center;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .cart img {
-            width: 24px;
-            margin-right: 10px;
-        }
-
-        nav {
-            background-color: #d890ff;
-            color: white;
-            padding: 10px 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            text-decoration: none;
-        }
-
-
-        .product img {
-            max-width: 150px;
-            margin-right: 20px;
-        }
-
-        .product-details {
-            flex: 1;
-        }
-
-        .product-details h3 {
-            margin: 0 0 10px 0;
-        }
-
-        .product-details p {
-            margin: 0 0 5px 0;
-            font-size: 14px;
-        }
-
-        .product-price {
-            font-weight: bold;
-            color: #b12704;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #ae57e1;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-    </style>
+    <link href="stylec.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Les Reines du Tricot</h1>
 
         <div class="cart">
-            <img src="https://via.placeholder.com/24" alt="Panier">
+            <img src="img/panier.png" alt="Panier">
             <span><a href="panier.html">Panier</a></span>
             
         </div>
@@ -243,7 +20,6 @@
     <nav>
         <a href="index.html">Accueil</a>
         <a href="Catalogue.html">Produits</a>
-        <a href="#guides">Guides</a>
         <a href="#contact">Contact</a>
     </nav>
     </style>
@@ -255,7 +31,7 @@
         <div class="product-grid">
             <!-- Carte produit 1 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <img src="img/merinos.jpg" alt="Pelote de laine" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Pelote de Laine Mérinos</h3>
                     <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
@@ -266,7 +42,7 @@
     
             <!-- Carte produit 2 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <img src="img/coton.jpg" alt="Pelote de laine" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Pelote de Coton Bio</h3>
                     <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
@@ -277,7 +53,7 @@
     
             <!-- Carte produit 3 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Aiguilles à tricoter" class="product-image">
+                <img src="img/bois.jpg" alt="Aiguilles à tricoter" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Aiguilles à Tricoter en Bois</h3>
                     <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
@@ -288,7 +64,7 @@
     
             <!-- Carte produit 4 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/300x200" alt="Kit de tricot" class="product-image">
+                <img src="img/kit.jpg" alt="Kit de tricot" class="product-image">
                 <div class="product-info">
                     <h3 class="product-title">Kit de Tricot Débutant</h3>
                     <p class="product-description">Tout le nécessaire pour commencer facilement.</p>
@@ -296,12 +72,180 @@
                     <button class="addToCart" data-id="4" data-name="Kit de Tricot Débutant" data-price="29.90">Ajouter au panier</button>
                 </div>
             </div>
+
+            <div class="product-card">
+                <img src="img/agneau.jpg" alt="Pelote de laine d'agneau" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Laine d'agneau</h3>
+                    <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
+                    <p class="product-price">9,99 €</p>
+                    <button class="addToCart" data-id="5" data-name="Pelote de Laine d'agneau" data-price="9.99">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Coton Bio</h3>
+                    <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
+                    <p class="product-price">7,50 €</p>
+                    <button class="addToCart" data-id="6" data-name="Pelote de Coton Bio" data-price="7.50">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 3 -->
+            <div class="product-card">
+                <img src="img/circu.jpg" alt="Aiguilles circulaire" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Aiguilles circulaires</h3>
+                    <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
+                    <p class="product-price">14,90 €</p>
+                    <button class="addToCart" data-id="7" data-name="Aiguilles circulaires" data-price="14.90">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 4 -->
+            <div class="product-card">
+                <img src="img/learn.jpg" alt="Livre de Crochet" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Livre pour apprendre le crochet</h3>
+                    <p class="product-description">Avec ce livre, vous serez un pro du crochet</p>
+                    <p class="product-price">15,90 €</p>
+                    <button class="addToCart" data-id="8" data-name="Livre de Crochet" data-price="15.90">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="img/alpaga.jpg" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Laine d'alpaga</h3>
+                    <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
+                    <p class="product-price">14,99 €</p>
+                    <button class="addToCart" data-id="9" data-name="Pelote de Laine d'alpaga" data-price="14.99">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Coton Bio</h3>
+                    <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
+                    <p class="product-price">7,50 €</p>
+                    <button class="addToCart" data-id="10" data-name="Pelote de Coton Bio" data-price="7.50">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 3 -->
+            <div class="product-card">
+                <img src="img/metal.jpg" alt="Aiguilles à tricoter en métal" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Aiguilles à Tricoter en métal</h3>
+                    <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
+                    <p class="product-price">8,90 €</p>
+                    <button class="addToCart" data-id="11" data-name="Aiguilles à Tricoter en métal" data-price="8.90">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Kit de tricot" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Kit de Tricot Débutant</h3>
+                    <p class="product-description">Tout le nécessaire pour commencer facilement.</p>
+                    <p class="product-price">29,90 €</p>
+                    <button class="addToCart" data-id="12" data-name="Kit de Tricot Débutant" data-price="29.90">Ajouter au panier</button>
+                </div>
+            </div><div class="product-card">
+                <img src="img/cachemire.jpg" alt="La laine de cachemire" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">La laine de cachemire</h3>
+                    <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
+                    <p class="product-price">19,99 €</p>
+                    <button class="addToCart" data-id="13" data-name="La laine de cachemire" data-price="19.99">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Coton Bio</h3>
+                    <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
+                    <p class="product-price">7,50 €</p>
+                    <button class="addToCart" data-id="14" data-name="Pelote de Coton Bio" data-price="7.50">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 3 -->
+            <div class="product-card">
+                <img src="img/bambou.jpg" alt="Aiguilles à tricoter en Bambou" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Aiguilles à Tricoter en Bambou</h3>
+                    <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
+                    <p class="product-price">12,90 €</p>
+                    <button class="addToCart" data-id="15" data-name="Aiguilles à Tricoter en Bambou" data-price="12.90">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Kit de tricot" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Kit de Tricot Débutant</h3>
+                    <p class="product-description">Tout le nécessaire pour commencer facilement.</p>
+                    <p class="product-price">29,90 €</p>
+                    <button class="addToCart" data-id="16" data-name="Kit de Tricot Débutant" data-price="29.90">Ajouter au panier</button>
+                </div>
+            </div><div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Laine Mérinos</h3>
+                    <p class="product-description">Douce et chaude, idéale pour les projets d'hiver.</p>
+                    <p class="product-price">9,99 €</p>
+                    <button class="addToCart" data-id="17" data-name="Pelote de Laine Mérinos" data-price="9.99">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pelote de laine" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pelote de Coton Bio</h3>
+                    <p class="product-description">Respectueuse de l'environnement et parfaite pour l'été.</p>
+                    <p class="product-price">7,50 €</p>
+                    <button class="addToCart" data-id="18" data-name="Pelote de Coton Bio" data-price="7.50">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 3 -->
+            <div class="product-card">
+                <img src="img/crochet.jpg" alt="Aiguilles de crochet" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Aiguilles de crochet</h3>
+                    <p class="product-description">Confortables et légères, pour un tricot sans effort.</p>
+                    <p class="product-price">6,90 €</p>
+                    <button class="addToCart" data-id="19" data-name="Aiguilles de crochet" data-price="6.90">Ajouter au panier</button>
+                </div>
+            </div>
+    
+            <!-- Carte produit 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Kit de tricot" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Kit de Tricot Débutant</h3>
+                    <p class="product-description">Tout le nécessaire pour commencer facilement.</p>
+                    <p class="product-price">29,90 €</p>
+                    <button class="addToCart" data-id="20" data-name="Kit de Tricot Débutant" data-price="29.90">Ajouter au panier</button>
+                </div>
+            </div><div class="product-card">
+
+            </div>
         </div>
         <script src="script.js"></script>
-    <footer>
-        <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
-        <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
-    </footer>
-    
+        <footer>
+            <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+            <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+        </footer>
 </body>
 </html>

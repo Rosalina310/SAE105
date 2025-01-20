@@ -4,86 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Reines du Tricot - Panier</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fcf6fa;
-            color: #333;
-        }
-
-        header {
-            background-color: #ae57e1;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .cart img {
-            width: 24px;
-            margin-right: 10px;
-        }
-
-        nav {
-            background-color: #c275ee;
-            color: white;
-            padding: 10px 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            text-decoration: none;
-        }
-
-        h1, h2 {
-            text-align: center;
-            color: #ae57e1;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #cartItems li {
-            background: #fff;
-            margin: 10px auto;
-            padding: 10px;
-            border-radius: 5px;
-            max-width: 400px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        #cartTotal {
-            text-align: center;
-            font-size: 18px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <link href="stylep.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Les Reines du Tricot</h1>
 
         <div class="cart">
-            <img src="https://via.placeholder.com/24" alt="Panier">
+            <img src="img/panier.png" alt="Panier">
             <span><a href="panier.html">Panier</a></span>
         </div>
     </header>
@@ -91,7 +19,6 @@
     <nav>
         <a href="index.html">Accueil</a>
         <a href="catalogue.html">Produits</a>
-        <a href="#guides">Guides</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -101,5 +28,9 @@
 <p id="cartTotal"></p>
 <script src="panier.js"></script>
 
+<footer>
+    <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
+    <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
+</footer>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Produit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-header {
+            display: flex;
+            align-items: center;
+        }
+        .product-header img {
+            max-width: 300px;
+            margin-right: 30px;
+        }
+        .product-info {
+            flex: 1;
+        }
+        .product-info h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .price {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            margin: 20px 0;
+        }
+        .product-description {
+            margin-top: 20px;
+        }
+        .product-description h3 {
+            font-size: 1.2rem;
+        }
+        .product-details {
+            margin-top: 20px;
+        }
+        .product-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product-details ul li {
+            margin: 8px 0;
+        }
+        .buy-button {
+            background-color: #27ae60;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .buy-button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-header">
+            <img src="img/agneau.jpg" alt="laine d'agneau">
+            <div class="product-info">
+                <h1>Laine d'agneau</h1>
+                <p class="price">€99.99</p>
+                <p>Disponible en stock</p>
+                <a href="#" class="buy-button">Acheter maintenant</a>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h3>Description du produit</h3>
+            <p>Voici une brève description de ce produit. Il est fabriqué avec des matériaux de haute qualité et offre de nombreuses fonctionnalités qui répondent aux besoins des utilisateurs.</p>
+        </div>
+
+        <div class="product-details">
+            <h3>Caractéristiques</h3>
+            <ul>
+                <li>Poids : 50g</li>
+                <li>taille : 1m</li>
+                <li>Matériau : laine</li>
+            </ul>
+        </div>
+
+</body>
+</html>
