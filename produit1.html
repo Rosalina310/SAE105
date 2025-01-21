@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -31,19 +31,26 @@
 
                 <label for="couleur">Choisissez la couleur :</label>
                 <select id="couleur" name="couleur">
-                    <option value="blanc">Blanc</option>
-                    <option value="noir">Noir</option>
-                    <option value="rose">Rose</option>
-                    <option value="bleu">Bleu</option>
-                    <option value="vert">Vert</option>
+                    <option value="Blanc">Blanc</option>
+                    <option value="Noir">Noir</option>
+                    <option value="Rose">Rose</option>
+                    <option value="Bleu">Bleu</option>
+                    <option value="Vert">Vert</option>
                 </select>
 
-                </br>
+                <br/>
                 <label for="quantite">Choisissez la quantité :</label>
                 <input type="number" id="quantite" name="quantite" min="1" max="100" value="1">
-                </br>
-                </br>
-                <button class="addToCart" data-id="1" data-name="Pelote de Laine Mérinos" data-price="9.99" onclick="ajouterAuPanier()">Ajouter au panier</button>
+                <br/><br/>
+
+                <button     
+                    class="add-to-cart-btn" 
+                    data-id="1" 
+                    data-name="Pelote de Laine Mérinos" 
+                    data-price="9.99">
+                    Ajouter au panier
+                </button>
+                <script src="script.js"></script>
             </div>
         </div>
 
@@ -66,14 +73,5 @@
         <p>&copy; 2025 Les Reines du Tricot. Tous droits réservés.</p>
         <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="politique.html">Politique de confidentialité</a></p>
     </footer>
-
-    <script>
-        function ajouterAuPanier() {
-            var couleur = document.getElementById('couleur').value;
-            var quantite = document.getElementById('quantite').value;
-
-            alert('Ajouté au panier: ' + quantite + ' pelote(s) de laine Mérinos (' + couleur + ')');
-        }
-    </script>
 </body>
 </html>

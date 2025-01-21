@@ -19,60 +19,44 @@ function setCookie(name, value, minutes) {
 
 // Charger les articles du panier
 window.addEventListener('DOMContentLoaded', () => {
-    const cartItems = document.getElementById('cartItems'); // Conteneur pour les articles du panier
-    const cartTotal = document.getElementById('cartTotal'); // Conteneur pour le total
-    let cart = JSON.parse(getCookie('cart') || '[]'); // Récupère tous les produits du panier
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    let cart = [];
+
+    try {
+        cart = JSON.parse(getCookie('cart') || '[]');
+    } catch (e) {
+        console.error('Erreur lors de la récupération du panier :', e);
+        cart = [];
+    }
 
     if (cart.length > 0) {
-        let totalPrice = 0; // Initialisation du prix total
+        let totalPrice = 0;
 
-        // Regrouper les produits par ID et calculer les quantités
-        const groupedProducts = cart.reduce((acc, product) => {
-            const existingProduct = acc.find(item => item.id === product.id);
-            if (existingProduct) {
-                // Augmenter la quantité du produit existant
-                existingProduct.quantity += product.quantity;
-            } else {
-                // Ajouter le produit avec la quantité initiale
-                acc.push({...product, quantity: product.quantity || 1});
-            }
-            return acc;
-        }, []);
-
-        // Afficher les produits avec leur quantité et bouton de suppression
-        groupedProducts.forEach(product => {
+        cart.forEach(product => {
             const listItem = document.createElement('li');
-            listItem.textContent = `${product.name} - ${product.price} € x(${product.quantity})`;
+            listItem.textContent = `${product.name} (${product.couleur}) - ${product.price} € x ${product.quantite}`;
 
-            // Ajouter le bouton de suppression
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Supprimer';
             deleteButton.style.marginLeft = '10px';
             deleteButton.addEventListener('click', () => {
-                if (confirm(`Êtes-vous sûr de vouloir supprimer ${product.name} de votre panier ?`)) {
-                    // Supprimer le produit du panier
-                    cart = cart.filter(item => item.id !== product.id);
-
-                    // Mettre à jour le cookie avec le panier mis à jour
+                if (confirm(`Êtes-vous sûr de vouloir supprimer ${product.name} ?`)) {
+                    cart = cart.filter(item => !(item.id === product.id && item.couleur === product.couleur));
                     setCookie('cart', JSON.stringify(cart), 10);
-
-                    // Réactualiser l'affichage du panier
-                    window.location.reload(); // Utiliser window.location.reload() pour forcer le rechargement de la page
+                    window.location.reload();
                 }
             });
 
-            // Ajouter le bouton au produit
             listItem.appendChild(deleteButton);
             cartItems.appendChild(listItem);
 
-            // Calculer le prix total
-            totalPrice += product.price * product.quantity;
+            totalPrice += product.price * product.quantite;
         });
 
-        // Afficher le prix total
         cartTotal.textContent = `Total : ${totalPrice.toFixed(2)} €`;
     } else {
-        cartItems.textContent = 'Votre panier est vide ou les articles ont expiré.';
-        if (cartTotal) cartTotal.textContent = ''; // Effacer le total s'il n'y a rien
+        cartItems.textContent = 'Votre panier est vide.';
+        cartTotal.textContent = '';
     }
 });
